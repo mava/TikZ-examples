@@ -64,6 +64,19 @@ conedoff=true,
 fixed point/.style={radius=0.085},
 }
 
+% Z/2-action arrows
+\ifmorseaction
+\foreach \y in {2, -2.6}
+{
+\draw[black!66, -{Stealth[bend=1.2, scale=.75]}]
+  (-.3,\y+.3) arc [x radius=0.3, y radius=0.075, start angle=180, delta angle=160];
+\draw[black!66, -{Stealth[bend=1.2, scale=.75]}, dash pattern=on 8 off 2]
+  (+.3,\y+.3) arc [x radius=0.3, y radius=0.075, start angle=000, delta angle=160];
+\draw[black!66, densely dotted]
+  (0,\y) -- (0,\y+.17) (0,\y+.27) -- (0,\y+.58);
+}
+\fi
+
 % levels
 \ifmorselevels
 \foreach \x in {-1, 1}
@@ -190,19 +203,6 @@ fixed point/.style={radius=0.085},
 \ifmorsedstars
 \draw[dlink, lkst] (\x,\y) -- (\x+\dir*.4,\y-.4);
 \fi
-}
-\fi
-
-% Z/2-action arrows
-\ifmorseaction
-\foreach \y in {2, -2.6}
-{
-\draw[black!66, -{Stealth[bend=1.2, scale=.75]}]
-  (-.3,\y+.3) arc [x radius=0.3, y radius=0.075, start angle=180, delta angle=160];
-\draw[black!66, -{Stealth[bend=1.2, scale=.75]}, dash pattern=on 8 off 2]
-  (+.3,\y+.3) arc [x radius=0.3, y radius=0.075, start angle=000, delta angle=160];
-\draw[black!66, densely dotted]
-  (0,\y) -- (0,\y+.17) (0,\y+.27) -- (0,\y+.58);
 }
 \fi
 
