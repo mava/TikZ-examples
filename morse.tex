@@ -14,11 +14,14 @@
        Author={Marco Varisco},
 }]{hyperref}
 
-\newcommand*{\surl}[2][www.]{\href{https://#1#2}{\nolinkurl{#2}}}
+\newcommand*{\surl}  [2][www.]{\href{https://#1#2}{\nolinkurl{#2}}}
 \newcommand*{\hemail}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+\newcommand*{\arXiv} [1]{\href{https://www.arxiv.org/abs/#1}{\nolinkurl{arXiv:#1}}}
 
 
 \begin{document}
+
+From \arXiv{1909.04487}.
 
 \newif\ifmorseheight
 \newif\ifmorseaction
